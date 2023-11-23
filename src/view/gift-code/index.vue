@@ -1,7 +1,7 @@
 <template>
    <div class="gift-code">
       <div class="input">
-         <el-input v-model.trim="cdk" placeholder="输入cdk" clearable maxlength="8"> </el-input>
+         <el-input v-model.trim="cdk" placeholder="输入cdk" clearable maxlength="20"> </el-input>
          <el-button type="primary" @click="startConfirm" :disabled="!cdk">一键领取</el-button>
       </div>
       <div class="list">
@@ -9,13 +9,14 @@
             :data="tableData"
             style="width: 100%"
             border
+            stripe
             :cell-style="{ textAlign: 'center' }"
             :header-cell-style="{ 'text-align': 'center' }"
             :row-style="{ height: '60px' }"
          >
-            <el-table-column label="index" type="index" width="100" :index="indexMethod" />
-            <el-table-column prop="id" label="id" />
-            <el-table-column prop="kid" label="大区">
+            <el-table-column fixed type="index" label="#" width="50px" :index="indexMethod" />
+            <el-table-column prop="id" label="id" width="100px" />
+            <el-table-column prop="kid" label="大区" width="100px">
                <template #default="scope">
                   {{ scope.row.kid || '登录获取' }}
                </template>
@@ -25,7 +26,7 @@
                   {{ scope.row.nickname || '登录获取' }}
                </template>
             </el-table-column>
-            <el-table-column prop="avatar_image" label="头像">
+            <el-table-column prop="avatar_image" label="头像" width="100px">
                <template #default="scope">
                   <el-image
                      style="width: 50px; height: 50px"
@@ -41,7 +42,7 @@
                   </el-image>
                </template>
             </el-table-column>
-            <el-table-column prop="loginStatus" label="登录状态">
+            <el-table-column prop="loginStatus" label="登录状态" width="120px">
                <template #default="scope">
                   <el-tag class="ml-2" :type="scope.row.loginStatus === 0 ? 'success' : 'info'">
                      {{ scope.row.loginStatus === 0 ? '登录成功' : '未登录' }}</el-tag
@@ -49,7 +50,7 @@
                </template>
             </el-table-column>
 
-            <el-table-column prop="confirmStatus" label="领取状态">
+            <el-table-column prop="confirmStatus" label="领取状态" width="120px">
                <template #default="scope">
                   <el-tag class="ml-2" :type="scope.row.getStatus === 0 ? 'success' : 'info'">
                      {{ scope.row.getStatus === 0 ? '领取成功' : '未领取' }}</el-tag
@@ -124,8 +125,7 @@ const indexMethod = (index: number) => {
 
 <style scoped lang="less">
 .gift-code {
-   margin: 6em auto;
-   width: 50%;
+   margin: 20px;
 }
 .input {
    display: flex;
