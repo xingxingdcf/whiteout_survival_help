@@ -122,18 +122,18 @@ const indexMethod = (index: number) => {
    return index + 1;
 };
 
-function filterStatus(code: number) {
-   switch (code) {
-      case 40007:
-         return '超出兑换时间';
-      case 20000:
-         return '领取成功';
-      case 40008:
-         return 'code已领取';
-      default:
-         break;
-   }
-}
+// function filterStatus(code: number) {
+//    switch (code) {
+//       case 40007:
+//          return '超出兑换时间';
+//       case 20000:
+//          return '领取成功';
+//       case 40008:
+//          return 'code已领取';
+//       default:
+//          break;
+//    }
+// }
 </script>
 
 <style scoped lang="less">
