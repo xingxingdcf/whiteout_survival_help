@@ -9,7 +9,7 @@ export function appendSign(obj: any) {
          );
       }, '');
    return {
-      sign: (0, CryptoJS.MD5)(str + 'w!C&5LQIkMr:FCv@wWYTd8L@&m,r(o').toString(CryptoJS.enc.Hex),
+      sign: (0, CryptoJS.MD5)(str + 'tB87#kPtkxqOS2').toString(CryptoJS.enc.Hex),
       ...obj,
    };
 }
