@@ -1,10 +1,14 @@
+import './style/tailwind.less';
+
 import { createApp } from 'vue';
-import App from './App.vue';
 // import router from './router';
-import { pinia } from './store';
-import 'element-plus/dist/index.css';
+import { setupStore } from './store';
+import App from './App.vue';
 
-const app = createApp(App);
+async function bootstrap() {
+   const app = createApp(App);
+   setupStore(app);
 
-app.use(pinia);
-app.mount('#app');
+   app.mount('#app');
+}
+bootstrap();

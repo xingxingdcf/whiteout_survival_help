@@ -9,17 +9,24 @@
       "preview": "vite preview"
    },
    "dependencies": {
-      "crypto-js": "^4.2.0",
+      "crypto-js": "^3.3.0",
       "element-plus": "^2.4.2",
       "pinia": "^2.1.7",
+      "pinia-plugin-persistedstate": "^3.2.1",
       "vue": "^3.3.4"
    },
    "devDependencies": {
       "@types/axios": "^0.14.0",
-      "@types/crypto-js": "^4.2.1",
+      "@types/crypto-js": "^3.1.47",
       "@types/node": "^20.9.0",
+      "@vicons/ionicons5": "^0.12.0",
       "@vitejs/plugin-vue": "^4.2.3",
+      "@vitejs/plugin-vue-jsx": "^3.1.0",
+      "autoprefixer": "^10.4.18",
       "less": "^4.2.0",
+      "naive-ui": "^2.38.1",
+      "postcss": "^8.4.35",
+      "tailwindcss": "^3.4.1",
       "typescript": "^5.0.2",
       "unplugin-auto-import": "^0.16.7",
       "unplugin-vue-components": "^0.25.2",

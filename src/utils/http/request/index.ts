@@ -34,9 +34,8 @@ class HYRequest {
       this.instance.interceptors.response.use(
          (res) => {
             const code = res.data.code;
-            if (code === 0) {
-               return res.data;
-            }
+
+            return res.data;
          },
          (err) => {
             return Promise.reject(err);
