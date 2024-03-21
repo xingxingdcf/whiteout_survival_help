@@ -33,8 +33,6 @@ class HYRequest {
       );
       this.instance.interceptors.response.use(
          (res) => {
-            const code = res.data.code;
-
             return res.data;
          },
          (err) => {

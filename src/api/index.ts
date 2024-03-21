@@ -1,9 +1,9 @@
 import { appendSign } from '@/utils';
 import defHttp from '@/utils/http/index';
-import { UserInfoModel, RequestParams } from './model/userInfoModel';
+import { RequestParams } from './model/userInfoModel';
 
 export function getRoleInfoApi(data: RequestParams) {
-   return defHttp.post<UserInfoModel>({
+   return defHttp.post({
       url: '/player',
       data: appendSign(data),
       headers: {

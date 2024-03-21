@@ -1,7 +1,6 @@
 import cryptoJs from 'crypto-js';
-import type { RequestParams } from '@/api/model/userInfoModel';
 
-export const appendSign = (obj: RequestParams) => {
+export const appendSign = (obj: any) => {
    var str = Object.keys(obj)
       .sort()
       .reduce(function (pre, cur) {
